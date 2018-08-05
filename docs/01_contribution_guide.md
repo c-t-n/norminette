@@ -49,4 +49,4 @@ If you want to contribute in our code base, you should do it with our developper
 * Your contribution must compile with the rest of the code base (at least for Mac OS X)
 * Your contribution need the approbation of at least one of the core team member before merging
 * Your contribution need to pass all the tests before merging
-
+* Our Core Team don't make merge requests Friday Night... for obvious reasons.
