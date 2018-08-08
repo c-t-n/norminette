@@ -25,7 +25,7 @@ You can contribute in many ways:
 
 ## Submit a bug or an idea a.k.a. Using the Issueboard
 
-Every bug, idea, task or question must be logged on our [Issueboard](https://github.com/c-t-n/ziggurat/issues) for tracability. Even if the project is focused for 42 community, our team act that the Issueboard is the only source of truth.
+Every bug, idea, task or question must be logged on our [Issueboard](https://github.com/c-t-n/ziggurat/issues) for tracability. Even if the project is focused for 42 and its community is strongly active on Slack, we decided that everything inside the Boards and the docs of this repository should be the only source of truth for everyone.
 
 The rules for submiting something are simple:
 * You are posting because you strongly believe your point is relevant
