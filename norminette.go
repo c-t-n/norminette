@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./norminette"
+	"github.com/c-t-n/ziggurat/norminette"
 )
 
 func main() {
