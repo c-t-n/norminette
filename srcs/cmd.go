@@ -33,13 +33,11 @@ and displays every norm errors.`,
 	Args: cobra.MinimumNArgs(0),
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) == 0 {
-			fmt.Println("Checking path .")
-			WalkInsideProject(".")
-		} else {
-			for _, path := range args {
-				fmt.Println("Checking path ", path)
-				WalkInsideProject(path)
-			}
+			args = []string{"."}
+		}
+		for _, path := range args {
+			fmt.Println("Checking path ", path)
+			WalkInsideProject(path)
 		}
 	},
 }
