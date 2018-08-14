@@ -14,6 +14,10 @@ func WalkInsideProject(path string) {
 
 	err := filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
 		//fmt.Printf(" > Checking %q\n", info.Name())
+		if info == nil{
+			return fmt.Errorf("Can't open file: %q", path)
+		}
+
 		if info.IsDir() {
 			//fmt.Printf(" Skipping %q... because it's a DIR\n", path)
 			return nil
