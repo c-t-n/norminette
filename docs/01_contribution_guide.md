@@ -17,7 +17,7 @@ You can contribute in many ways:
 ## Usefull Resources
 
 * Our code of conduct (available in this file)
-* [A tour of Go](https://tour.golang.org/) 
+* [A tour of Go](https://tour.golang.org/)
 * [Effective Go](https://golang.org/doc/effective_go.html)
 * The 42 Norm (available in French and English in this)
 
@@ -25,7 +25,7 @@ You can contribute in many ways:
 
 ## Submit a bug or an idea a.k.a. Using the Issueboard
 
-Every bug, idea, task or question must be logged on our [Issueboard](https://github.com/c-t-n/ziggurat/issues) for tracability. This project is focused for 42, and even if its community is active mostly on Slack, we decided that everything inside the Boards and the docs of this repository are the only source of truth for everyone.
+Every bug, idea, task or question must be logged on our [Issueboard](https://github.com/c-t-n/norminette/issues) for tracability. This project is focused for 42, and even if its community is active mostly on Slack, we decided that everything inside the Boards and the docs of this repository are the only source of truth for everyone.
 
 The rules for submiting something are simple:
 * You are posting because you strongly believe your point is relevant
@@ -50,5 +50,3 @@ If you want to contribute in our code base, you should do it with our developper
 * Your contribution need the approbation of at least one of the core team member before merging
 * Your contribution need to pass all the tests before merging
 * Our Core Team doesn't push anything on production on Friday night... for obvious reasons.
-
-
