@@ -33,13 +33,14 @@ brew install norminette
 
 # Core Team
 
-Lead Dev / Core contributor : Franck LOURME 
- * Twitter : @\_coton\_
+Lead Dev / Core contributor : Franck LOURME
+ * Twitter : [@\_coton\_](https://twitter.com/_coton_)
  * 42 login : flourme
 
 Core contributor : Charles LABOURIER
- * Twitter : @TheRealCaracal 
+ * Twitter : [@CherryFCake](https://twitter.com/CherryFCake)
  * 42 login : clabouri
+ * Gitlab : [clafoutis](https://gitlab.com/clafoutis)
 
 Core contributor : ## HIRING ##
 
