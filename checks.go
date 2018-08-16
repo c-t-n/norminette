@@ -30,6 +30,12 @@ var headerRegExp = []string{
 // CheckHeader checks if the 42 Header is correctly on top of files.
 // It checks also if all the lines have exactly 80 characters, because
 // some items (like logins) have variable lenght.
+// Can be skipped with --bypass-header flag
+//
+// Checks:
+//	* Minimum height in a file for header
+//	* Line width for every header's line
+//	* Every line pattern
 //
 // Returns:
 // 	- []NormError : All the NormError spotted
@@ -48,7 +54,12 @@ func CheckHeader(file []string) ([]NormError, error) {
 	if len(file) >= 11 {
 		headerSlice = file[:11]
 	} else {
-		headerSlice = file
+		normErrors = append(normErrors, NormError{
+			line:   len(file),
+			column: 1,
+			msg:    `File has not the minimum line height for header, is it really here ?`,
+		})
+		err = fmt.Errorf(`File has not the minimum line height for header, is it really here ?`)
 	}
 
 	for index, line := range headerSlice {

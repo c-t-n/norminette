@@ -28,6 +28,7 @@ func TestCheckHeader(t *testing.T) {
 	}{
 		{"tests/header-tests/good-one", "Testing a good header [should pass]", false, false},
 		{"tests/header-tests/missplaced", "Testing a missplaced header [should fail]", true, false},
+		{"tests/header-tests/cutted-header", "Testing a cutted header [should fail]", true, false},
 		{"tests/header-tests/miss-login", "Testing a bad login header [should fail]", true, false},
 		{"tests/header-tests/miss-login", "Testing a bad login header but skip CheckHeader [should pass]", false, true},
 	}
