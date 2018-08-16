@@ -1,4 +1,4 @@
-package norminette
+package main
 
 import (
 	"fmt"
@@ -7,14 +7,17 @@ import (
 	"regexp"
 )
 
-func WalkInsideProject(path string) {
+func WalkInsideProject(path string) error {
 	cSourceFile, _ := regexp.Compile(".*\\.c$")
 	hSourceFile, _ := regexp.Compile(".*\\.h$")
 	Makefile, _ := regexp.Compile("^Makefile$")
 
 	err := filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
-		//fmt.Printf(" > Checking %q\n", info.Name())
-		if info == nil{
+		if err != nil {
+			return err
+		}
+
+		if info == nil {
 			return fmt.Errorf("Can't open file: %q", path)
 		}
 
@@ -24,29 +27,29 @@ func WalkInsideProject(path string) {
 		}
 
 		if cSourceFile.MatchString(info.Name()) {
-			fmt.Printf("cSourceFile\t|  FOUND %q ! NORMINETTING\n", info.Name())
+			fmt.Printf("cSourceFile\t|  FOUND %q !\n", info.Name())
 			// TODO: Add go routine for C file checking
 			return nil
 		}
 
 		if hSourceFile.MatchString(info.Name()) {
-			fmt.Printf("hSourceFile\t|  FOUND %q ! NORMINETTING\n", info.Name())
+			fmt.Printf("hSourceFile\t|  FOUND %q !\n", info.Name())
 			// TODO: Add go routine for H file checking
 			return nil
 		}
 
 		if Makefile.MatchString(info.Name()) && Cfg.Options.BypassMakefile == false {
-			fmt.Printf("Makefile\t|  FOUND %q ! NORMINETTING\n", info.Name())
+			fmt.Printf("Makefile\t|  FOUND %q !\n", info.Name())
 			// TODO: Add go routine for Makefile checking
 			return nil
 		}
-
-		return nil
+		return err
 	})
 
 	if err != nil {
-		fmt.Println("Something went wrong")
-		fmt.Println(err)
+		fmt.Println("Error |", err)
 	}
+
+	return err
 
 }

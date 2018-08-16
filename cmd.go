@@ -1,4 +1,4 @@
-package norminette
+package main
 
 import (
 	"fmt"
@@ -18,6 +18,7 @@ type Options struct {
 	BypassLineWidth        bool
 	BypassFunctionHeight   bool
 	BypassMakefile         bool
+	BypassHeader           bool
 }
 
 var Cfg Config
@@ -43,16 +44,17 @@ and displays every norm errors.`,
 }
 
 func init() {
-	RootCmd.AddCommand(versionCmd)
+	RootCmd.AddCommand(VersionCmd)
 	RootCmd.PersistentFlags().BoolVarP(&Cfg.Debug, "debug", "d", false, "display debug informations")
 	RootCmd.PersistentFlags().BoolVarP(&Cfg.Verbose, "verbose", "v", false, "set the verbosity level a little higher")
 	RootCmd.Flags().BoolVarP(&Cfg.Options.BypassPrototypeInCFile, "bypass-prototypes", "", false, "skip errors related to prototypes functions in C files")
 	RootCmd.Flags().BoolVarP(&Cfg.Options.BypassLineWidth, "bypass-line-width", "", false, "skip errors related to line width")
 	RootCmd.Flags().BoolVarP(&Cfg.Options.BypassFunctionHeight, "bypass-function-height", "", false, "skip errors related to the number of lines inside a function block")
 	RootCmd.Flags().BoolVarP(&Cfg.Options.BypassMakefile, "bypass-makefile", "", false, "skip Makefile checks")
+	RootCmd.Flags().BoolVarP(&Cfg.Options.BypassHeader, "bypass-header", "", false, "skip Header checks")
 }
 
-func Execute() {
+func main() {
 	if err := RootCmd.Execute(); err != nil {
 		log.Panic(err)
 	}
