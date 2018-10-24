@@ -4,9 +4,9 @@
 > 
 > This repository is the Open Source version of this linter, managed by and for the 42 Community.
 
-**WARNING** : This project is still in development. We have no stable release right now. Stay tuned for upcoming release !
+**WARNING** : This project is still in its infancy. Stay tuned for more updates!
 
-**42 People, We hiring Golang developers and a vicious tester for this project, contact me at flourme@student.42.fr**
+**42 Students: We're looking for Golang developers and a (vicious!) QC lead for this project, contact me at flourme@student.42.fr**
 
 
 # Usage
@@ -18,8 +18,7 @@ main.c: 0 Errors
 $>
 ```
 
-# How to install
-
+# Installation
 ## Mac OSX
 ```
 # Not yet implemented
